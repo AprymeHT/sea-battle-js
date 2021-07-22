@@ -51,8 +51,7 @@ function addDeck(deck, square) {
     let lengthArrClose;
     if (Math.floor(deck % 10) < 9) {
         lengthArrClose = arrClose.length;
-    }
-    else lengthArrClose = arrClose.length - 3;
+    } else lengthArrClose = arrClose.length - 3;
 
     for (let i = 0; i < lengthArrClose; i++) {
         let elem = $(square + ' #cell' + arrClose[i]);
@@ -80,7 +79,7 @@ function randomInteger(min, max) {
     return rand;
 }
 
-// Рандомизация и получение нахождения частей корабля
+// Рандомизация и нахождение частей корабля
 function generation(numberOfDecks, square) {
     let deck = [];
     let direction = randomInteger(0, 1);

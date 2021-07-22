@@ -11,6 +11,11 @@
 <header>
     <h1>Sea battle</h1>
 </header>
+<div class="sun">
+    <svg class="svg-sun" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+        <circle cx="50" cy="50" r="35" id="sun"></circle>
+    </svg>
+</div>
 <section>
     <div id="leftSquareText">
         <p>Игрок</p>
@@ -31,21 +36,29 @@
         <div id="rightTextLeft"></div>
     </div>
 </section>
-    <nav>
-        <ul>
-            <li id=start>Начать</li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li id=start>Начать</li>
+    </ul>
+</nav>
 <div id="info"></div>
-    <div id="yourName">
-        <div>
+<div id="yourName">
+    <div>
             <span>
-                <p>Введите имя игрока</p>
+               <p>Введите имя игрока</p>
             </span>
-            <input type="text" id="name" value="Ваше имя">
-            <button onclick="getName()">OK</button>
-        </div>
+        <input type="text" id="name" value="Ваше имя">
+        <button onclick="getName()">OK</button>
     </div>
+</div>
+<div class="svg-container">
+    <svg id="wave"  viewbox="0 0 90 25"
+         preserveAspectRatio="none">
+        <path fill="#fff" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z" />
+        <path fill="#fff" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+    </svg>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
