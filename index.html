@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sea Battle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Sea battle</h1>
+</header>
+<section>
+    <div id="leftSquareText">
+        <p>Игрок</p>
+        <div id="leftText"></div>
+        <div id="leftSquare">
+            <div id="leftShade">
+            </div>
+        </div>
+        <div id="leftTextLeft"></div>
+    </div>
+    <div id="rightSquareText">
+        <p>Оппонент</p>
+        <div id="rightText"></div>
+        <div id="rightSquare">
+            <div id="rightShade">
+            </div>
+        </div>
+        <div id="rightTextLeft"></div>
+    </div>
+</section>
+    <nav>
+        <ul>
+            <li id=start>Начать</li>
+        </ul>
+    </nav>
+<div id="info"></div>
+    <div id="yourName">
+        <div>
+            <span>
+                <p>Введите имя игрока</p>
+            </span>
+            <input type="text" id="name" value="Ваше имя">
+            <button onclick="getName()">OK</button>
+        </div>
+    </div>
+<script src="js/main.js"></script>
+</body>
+</html>
