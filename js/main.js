@@ -14,6 +14,7 @@ for (let i = minElem; i < maxElem; i++) {
 // Генерация массива для ходов компьютера
 $('#start').click(function() { // Создание поля
 
+    $('#start').html('Начать заново');
     $('#rightSquareText').toggle(); // Показывает правое поле при нажании на "Начать"
 
     clearSquares('#leftSquare, #rightSquare'); // Генерация пустого поля
@@ -38,6 +39,11 @@ $('#start').click(function() { // Создание поля
     paintingSquare('#rightSquare');
     whatsShot(true);
 });
+
+$('#newGame').click(function() {
+    $('#rightSquareText').toggle();
+});
+
 
 // Добавление "слоев" на поле боя
 function addShades() {
@@ -140,7 +146,6 @@ function opponentShot() {
     arrElems.splice(i, 1);
     let cell = '#leftSquare #cell' + arrElems[i];
     if (randomInteger(0, 5) > 1 && $(cell).hasClass('waterColor')) {
-        console.log('fffff');
         for (let i = 0; i < arrElems.length; i++) {
             if ($('#cell' + arrElems[i]).hasClass('.deckColor')) {
                 cell = '#cell' + arrElems[i];

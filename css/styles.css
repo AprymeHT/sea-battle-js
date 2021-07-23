@@ -187,10 +187,7 @@ section div {
     position: fixed;
     margin: 10% auto;
     width: 100%;
-    height: 100%;
-    background: -o-linear-gradient(#eee, transparent, #eee, #eee);
-    background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(transparent), color-stop(#eee), to(#eee));
-    background: linear-gradient(#eee, transparent, #eee, #eee);
+    height: 40%;
     left: 0;
     top: 0;
 }
@@ -273,11 +270,11 @@ section div {
     }
 }
 .svg-container {
-    position: relative;
+    position: absolute;
 }
 #wave {
     position: relative;
-    width: 120%;
+    width: 200%;
     height: 320px;
     -webkit-animation: wave 4s linear infinite;
     animation: wave 4s linear infinite;
@@ -330,5 +327,505 @@ section div {
     }
     100% {
         color: rgb(33, 255, 33);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "Amatic SC", cursive;
+        font-size: 12px;
+    }
+    body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        background: rgb(34, 193, 195);
+        background: -o-radial-gradient(
+                circle,
+                rgba(34, 193, 195, 1) 23%,
+                rgba(0, 0, 0, 1) 100%
+        );
+        background: radial-gradient(
+                circle,
+                rgba(34, 193, 195, 1) 23%,
+                rgba(0, 0, 0, 1) 100%
+        );
+    }
+    html,
+    body {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    header {
+        position: relative;
+    }
+    h1,
+    h6 {
+        font-size: 2em;
+        color: rgb(88, 178, 255);
+        text-shadow: 3px 5px rgba(137, 0, 0, 0.3);
+        margin: 0;
+        padding: 0;
+        z-index: 99;
+    }
+    h6 {
+        font-size: 1em;
+        text-shadow: none;
+    }
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        width: 120px;
+        cursor: pointer;
+        border: ridge;
+        border-radius: 5px;
+        background: rgb(69, 192, 255);
+    }
+    nav ul li:hover {
+        background: rgb(69, 192, 255);
+        border: groove;
+    }
+    section div {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        margin-right: 15px;
+    }
+    #leftFieldText p,
+    #rightFieldText p {
+        text-decoration: underline;
+    }
+    #leftTextLeft,
+    #rightTextLeft,
+    #leftText,
+    #rightText {
+        position: relative;
+        display: block;
+        color: #000;
+    }
+    #leftTextLeft,
+    #rightTextLeft {
+        width: 25px;
+        height: 250px;
+        left: -25px;
+        top: -25px;
+    }
+    #leftText,
+    #rightText {
+        width: 25px;
+        height: 25px;
+        top: 0px;
+    }
+    #leftText span,
+    #rightText span,
+    #leftTextLeft span,
+    #rightTextLeft span {
+        width: 25px;
+        height: 25px;
+        display: block;
+        color: #000;
+        position: relative;
+        float: left;
+    }
+    .cell {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        float: left;
+        background: #3cc0ff;
+        cursor: crosshair;
+        border: outset;
+        border-width: 1px;
+    }
+    .cell:hover {
+        opacity: 0.5;
+        border: 1px groove;
+    }
+    .waterColor {
+        background-color: rgb(60, 192, 255);
+        border: outset;
+        border-width: 1px;
+    }
+    .cellColor {
+        background-color: rgb(60, 192, 255);
+        border: outset;
+        border-width: 1px;
+    }
+    .cellColor:after {
+        display: block;
+        position: relative;
+        content: "\274c";
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+        border-radius: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .fireColor {
+        content: "";
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(151, 11, 11);
+        margin: 0;
+        border-radius: 50%;
+    }
+    .fireColor:after {
+        display: block;
+        position: relative;
+        content: "\2713";
+        color: #21ff21;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        border-radius: 100%;
+        text-align: center;
+        -webkit-animation: blink 3s linear infinite;
+        animation: blink 3s linear infinite;
+    }
+    .deckColor:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(198, 15, 15);
+        margin: 0;
+        border: 2px outset;
+        border-radius: 50%;
+    }
+    #rightShade,
+    #leftShade {
+        display: block;
+        width: 250px;
+        height: 250px;
+        background: #000;
+        position: relative;
+        opacity: 0.1;
+    }
+    #rightShade {
+        display: none;
+    }
+    #yourName {
+        text-align: center;
+        display: block;
+        position: fixed;
+        margin: 10% auto;
+        width: 100%;
+        height: 40%;
+        left: 0;
+        top: 0;
+    }
+    #yourName div {
+        width: 150px;
+        height: 100px;
+        background: rgb(69, 192, 255);
+        margin: 70px auto;
+        border-radius: 5px;
+        padding: 5px;
+        border: 5px groove;
+    }
+
+    .svg-container {
+        position: relative;
+    }
+    #wave {
+        position: relative;
+        width: 120%;
+        height: 220px;
+        -webkit-animation: wave 4s linear infinite;
+        animation: wave 4s linear infinite;
+    }
+    .sun {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .svg-sun {
+        width: 150px;
+        height: 150px;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+        animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+    }
+    #sun {
+        stroke-width: 12;
+        stroke-dasharray: 2;
+        stroke-dashoffset: 2;
+    }
+    @-webkit-keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    @keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "Amatic SC", cursive;
+        font-size: 8px;
+    }
+    body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        background: rgb(34, 193, 195);
+        background: -o-radial-gradient(
+                circle,
+                rgba(34, 193, 195, 1) 23%,
+                rgba(0, 0, 0, 1) 100%
+        );
+        background: radial-gradient(
+                circle,
+                rgba(34, 193, 195, 1) 23%,
+                rgba(0, 0, 0, 1) 100%
+        );
+    }
+    html,
+    body {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    header {
+        position: relative;
+    }
+    h1,
+    h6 {
+        font-size: 1em;
+        color: rgb(88, 178, 255);
+        text-shadow: 3px 5px rgba(137, 0, 0, 0.3);
+        margin: 0;
+        padding: 0;
+        z-index: 99;
+    }
+    h6 {
+        font-size: 1em;
+        text-shadow: none;
+    }
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        width: 80px;
+        cursor: pointer;
+        border: ridge;
+        border-radius: 5px;
+        background: rgb(69, 192, 255);
+    }
+    nav ul li:hover {
+        background: rgb(69, 192, 255);
+        border: groove;
+    }
+    section div {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        margin-right: 15px;
+    }
+    #leftFieldText p,
+    #rightFieldText p {
+        text-decoration: underline;
+    }
+    #leftTextLeft,
+    #rightTextLeft,
+    #leftText,
+    #rightText {
+        position: relative;
+        display: block;
+        color: #000;
+    }
+    #leftTextLeft,
+    #rightTextLeft {
+        width: 15px;
+        height: 150px;
+        left: -15px;
+        top: -15px;
+    }
+    #leftText,
+    #rightText {
+        width: 15px;
+        height: 15px;
+        top: 0px;
+    }
+    #leftText span,
+    #rightText span,
+    #leftTextLeft span,
+    #rightTextLeft span {
+        width: 15px;
+        height: 15px;
+        display: block;
+        color: #000;
+        position: relative;
+        float: left;
+    }
+    .cell {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        float: left;
+        background: #3cc0ff;
+        cursor: crosshair;
+        border: outset;
+        border-width: 1px;
+    }
+    .cell:hover {
+        opacity: 0.5;
+        border: 1px groove;
+    }
+    .waterColor {
+        background-color: rgb(60, 192, 255);
+        border: outset;
+        border-width: 1px;
+    }
+    .cellColor {
+        background-color: rgb(60, 192, 255);
+        border: outset;
+        border-width: 1px;
+    }
+    .cellColor:after {
+        display: block;
+        position: relative;
+        content: "\274c";
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        border-radius: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .fireColor {
+        content: "";
+        display: block;
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background-color: rgb(151, 11, 11);
+        margin: 0;
+        border-radius: 50%;
+    }
+    .fireColor:after {
+        display: block;
+        position: relative;
+        content: "\2713";
+        color: #21ff21;
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+        border-radius: 100%;
+        text-align: center;
+        -webkit-animation: blink 3s linear infinite;
+        animation: blink 3s linear infinite;
+    }
+    .deckColor:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background-color: rgb(198, 15, 15);
+        margin: 0;
+        border: 2px outset;
+        border-radius: 50%;
+    }
+    #rightShade,
+    #leftShade {
+        display: block;
+        width: 150px;
+        height: 150px;
+        background: #000;
+        position: relative;
+        opacity: 0.1;
+    }
+    #rightShade {
+        display: none;
+    }
+    #yourName {
+        text-align: center;
+        display: block;
+        position: fixed;
+        margin: 10% auto;
+        width: 100%;
+        height: 40%;
+        left: 0;
+        top: 0;
+    }
+    #yourName div {
+        width: 80px;
+        height: 60px;
+        background: rgb(69, 192, 255);
+        margin: 25px auto;
+        border-radius: 5px;
+        padding: 5px;
+        border: 5px groove;
+    }
+
+    .svg-container {
+        position: relative;
+    }
+    #wave {
+        position: relative;
+        width: 120%;
+        height: 150px;
+        top: 50%;
+        -webkit-animation: wave 4s linear infinite;
+        animation: wave 4s linear infinite;
+    }
+    .sun {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .svg-sun {
+        width: 80px;
+        height: 80px;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+        animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+    }
+    #sun {
+        stroke-width: 8;
+        stroke-dasharray: 2;
+        stroke-dashoffset: 2;
     }
 }
